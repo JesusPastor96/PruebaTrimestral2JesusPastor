@@ -35,7 +35,7 @@ name: Deploy via rsync
       uses: burnett01/rsync-deployments@7.0.1
       with:
         switches: -avzr --delete
-        path: dist/posts-get/browser/
+        path: dist/spa/browser/
         remote_path: ${{ secrets.VPS_PATH }}
         remote_host: ${{ secrets.VPS_HOST }}
         remote_user: ${{ secrets.VPS_USER }}

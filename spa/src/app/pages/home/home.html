@@ -1,0 +1,15 @@
+<h2>Listado de Series</h2>
+
+@if (series$ | async; as seriesList) {
+<div class="series-grid">
+    @for (series of seriesList; track series.id) {
+    <div class="series-card">
+        <h3>{{ series.title }}</h3>
+        <p><strong>Canal:</strong> {{ series.channel }}</p>
+        <p><strong>Rating:</strong> {{ series.rating }}</p>
+    </div>
+    }
+</div>
+} @else {
+<p>Cargando series...</p>
+}
